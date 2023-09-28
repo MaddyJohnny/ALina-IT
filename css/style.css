@@ -1,0 +1,1100 @@
+*{
+	box-sizing: border-box;
+}
+/*Скролбар*/
+body{
+	margin: 0;
+	font-family: 'Inter';
+    background-color: background-color: #f5f5f5;;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #474545;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: dimgray;
+  border-radius: 20px;
+  border: 2px solid gray;
+}
+/*Прелоадер*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #e0e0e0;
+  z-index: 1001;
+}
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+.loaded .preloader {
+  display: none;
+}
+/*Шапка*/
+.header{
+	height: 80px;
+	background-color:#000000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-logo{
+	margin-left: 26px;
+	margin-top: 10px;
+}
+.header-links{
+	text-decoration: none;
+	color: white;
+    font-size: 18px;
+	margin-right: 90px;
+    transition: .5s;
+}
+.header-links:hover{
+    transition: .5s;
+    color: #FF1111;
+}
+.dropbtn {
+    background-color: #ffffff;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 26px;
+}
+.dropdown {
+    position: relative;
+    display: none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 25px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+.dropdown-content .menu {
+    color: #4D4D4D;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #CCCCCC;}
+.menu:hover{
+    color: black;
+}
+/*Видео-визитка*/
+.backVideo{
+    width: 100%;;
+}
+.video-content{
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    z-index: 1;
+}
+.video_href{
+    cursor: default;
+}
+/*Преимущества компании*/
+.adventages{
+	margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.adventages-heading{
+	margin: 0 auto;
+	max-width: 861px;
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 100px;
+    margin-top: 72px;
+    cursor: default;
+}
+.plate-big{
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    margin-bottom: 100px;
+}
+.plate-last{
+    margin: 0 auto;
+}
+.plate-img{
+    align-items: flex-start;
+}
+.plate-info{
+    max-width: 500px;
+    min-height: 251px;
+    padding: 0px;
+    cursor: default;
+}
+.plate-info-last{
+	margin-bottom: 50px;
+    cursor: default;
+}
+
+.plate-description{
+    width: 500px;
+    font-size: 24px;
+    text-align: center;
+    padding: 0px;
+    cursor: default;
+}
+.list-max{
+	text-align: left;
+	max-width: 490px;
+	color: #000000;
+	margin: 0;
+	margin-bottom: 34px;
+	list-style-position: inside;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.list-min{
+    font-weight: 400;
+    cursor: default;
+}
+/*Курсы компании*/
+.courses-max{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.courses-heading{
+    max-width: 861px;
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 100px;
+    cursor: default;
+}
+.courses{
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.plate{
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    margin-bottom: 100px;
+}
+.plate-last{
+    margin: 0 auto;
+    margin-bottom: 75px;
+}
+.plate-price, .plate-info-cours{
+    margin: 0;
+    padding: 20px;
+    cursor: default;
+}
+.plate-img{
+    align-items: flex-start;
+}
+.plate-info{
+    max-width: 500px;
+    max-height: 188px;
+    margin-bottom: 37px;
+    cursor: default;
+}
+.plate-name{
+    font-size: 26px;
+    font-weight: bold;
+    max-width: 450px;
+    padding: 0px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    cursor: default;
+}
+.plate-price{
+    text-align: left;
+    font-size: 19px;
+    cursor: default;
+}
+/*Карточка записи*/
+.signup-max{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.plate-signup{
+    background-color: white;
+    width: 1320px;
+    height: 650px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    margin-bottom: 125px;
+}
+.signup-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 41px;
+    cursor: default;
+}
+.plate-su-name{
+    font-size: 64px;
+    font-weight: bold;
+    max-width: 648px;
+    padding: 0;
+    margin-bottom: 50px;
+    cursor: default;
+}
+.plate-su-info{
+    font-size: 26px;
+    max-width: 508px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 130px;
+    cursor: default;
+}
+.form-min{
+    display: flex;
+    flex-direction: column;
+}
+.input-field{
+    max-width: 550px;
+    height: 100px;
+    font-size: 40px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-bottom: 50px;
+}
+.input-field::placeholder{
+    color: black;
+    opacity: 30%;
+    font-size: 40px;
+}
+.input-button{
+    width: 550px;
+    height: 100px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition:  .5s;
+}
+.input-button:hover{
+    background-color: #E6E6E6;
+    color: black;
+    transition:  .5s;
+}
+/*Об академии*/
+.employeers-max{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.employeers-heading{
+    max-width: 861px;
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 100px;
+    cursor: default;
+}
+.employeers{
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.plate-emp{
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    margin-bottom: 100px;
+}
+.plate-name-emp, .plate-post-emp, .plate-experience-emp{
+    margin: 0;
+    padding: 20px;
+    cursor: default;
+}
+.plate-img-state{
+    margin: 0;
+    margin-top: 29px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 400px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+.plate-name-emp{
+    font-size: 26px;
+    line-height: 0px;
+    font-weight: bold;
+    cursor: default;
+}
+.plate-post-emp{
+    font-size: 24px;
+    line-height: 0px;
+    cursor: default;
+}
+.plate-experience-emp{
+    font-size: 24px;
+    line-height: 0px;
+    cursor: default;
+}
+.plate-portfolio-emp{
+    font-size: 23px;
+    line-height: 0px;
+    margin-top: 38px;
+    font-weight: medium;
+    text-decoration: none;
+    color: gray;
+}
+.plate-portfolio-href-emp{
+    color: gray;
+    text-decoration: underline;
+    transition:  .2s;
+}
+.plate-portfolio-href-emp:hover{
+    color: black;
+    transition:  .2s;
+}
+/*Подвал сайта*/
+.footer{
+    height: 302px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+}
+.footer-head{
+    display: flex;
+    flex-direction: row;
+}
+.footer-feet{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.footer-left{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.footer-left-heading{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.footer-left-block{
+    display: flex;
+    flex-direction: row;
+}
+.footer-left-text-left{
+    display: flex;
+    flex-direction: column;
+}
+.footer-left-text-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 47px;
+}
+.footer-left-text{
+    width: 245px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.footer-left-heading-a{
+    text-decoration: none;
+    cursor: default;
+}
+.footer-center{
+    width: 200%;
+    display: flex;
+    justify-content: center;
+}
+.footer-logo-img{
+    width: 200px;
+    margin-top: 102px;
+}
+.footer-right{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.footer-right-heading{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+.footer-right-block{
+    display: flex;
+    flex-direction: row;
+}
+.footer-right-text-left{
+    display: flex;
+    flex-direction: column;
+}
+.footer-right-text-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 47px;
+}
+.footer-right-text{
+    width: 230px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: right;
+}
+.footer-right-heading-a{
+    text-decoration: none;
+    cursor: default;
+}
+.footer-left-text:hover, .footer-right-text:hover{
+    text-decoration: underline;
+}
+.footer-feet-left{
+    display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+}
+.footer-feet-right{
+    width: 750px;
+    display: flex;
+    margin-right: 30px;
+    flex-direction: column;
+}
+.footer-feet-right-text{
+    color: white;
+    text-align: right;
+    font-size: 10px;
+    cursor: default;
+}
+.footer-feet-phone-number{
+    text-decoration: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.footer-feet-phone-text{
+    color: #FFFFFF;
+    font-size: 12px;
+    cursor: default;
+}
+.footer-feet-license-link{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+/*Медиазапрос для 1366px*/
+@media (max-width: 1366px){
+    .signup-max{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .plate-signup{
+        background-color: white;
+        width: 1024px;
+        height: 505px;
+        border-radius: 60px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        margin-bottom: 125px;
+    }
+    .signup-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .plate-su-name{
+        font-size: 54px;
+        font-weight: bold;
+        max-width: 648px;
+        padding: 0;
+        margin-bottom: 60px;
+    }
+    .plate-su-info{
+        font-size: 24px;
+        max-width: 508px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 130px;
+    }
+    .form-min{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-field{
+        max-width: 400px;
+        height: 75px;
+        font-size: 32px;
+        padding-left: 40px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25) inset;
+        margin-bottom: 40px;
+    }
+    .input-field::placeholder{
+        color: black;
+        opacity: 30%;
+        font-size: 32px;
+    }
+    .input-button{
+        width: 400px;
+        height: 75px;
+        border-radius: 20px;
+        border: 2px solid black;
+        background-color: black;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        transition:  .5s;
+        margin-right: 20px;
+    }
+    .input-button:hover{
+        background-color: #E6E6E6;
+        color: black;
+        transition:  .5s;
+    }
+    .header-links{
+        margin-right: 60px;
+    }
+}
+/*Медиазапрос для 1280px*/
+@media (max-width: 1280px){
+    .adventages{
+        justify-content: space-around;
+    }
+    .courses{
+        justify-content: space-around;
+    }
+    .employeers{
+        justify-content: space-around;
+    }
+    .plate-big{
+        margin-bottom: 50px;
+    }
+    .plate{
+        margin-bottom: 50px;
+    }
+    .plate-emp{
+        margin-bottom: 50px;
+    }
+    .adventages-heading{
+        margin-bottom: 50px;
+        margin-top: 36px;
+    }
+    .courses-heading{
+        margin-bottom: 50px;
+        margin-top: 36px;
+    }
+    .employeers-heading{
+        margin-bottom: 50px;
+    }
+    .plate-signup{
+        margin-bottom: 65px;
+        margin-top: 65px;
+    }
+    .plate-last{
+        margin-bottom: 0;
+    }
+    .footer{
+        height: 210px;
+    }
+    .footer-left-text, .footer-right-text{
+        display: none;
+    }
+    .footer-right-heading{
+        width: 150px;
+        margin-top: 61px;
+    }
+    .footer-left-heading{
+        width: 150px;
+        margin-top: 61px;
+    }
+    .footer-logo-img{
+        margin-top: 61px;
+    }
+}
+/*Медиазапрос для 1100px*/
+@media (max-width: 1100px){
+    .header-links{
+        margin-right: 30px;
+    }
+    .plate-description{
+        font-size: 22px;
+        max-width: 375px;
+    }
+    .list-min{
+        font-size: 21px;
+    }
+    .plate-name{
+        font-size: 22px;
+        font-weight: bold;
+        max-width: 400px;
+    }
+    .plate-img-small{
+        margin-bottom: 18px;
+    }
+    .signup-max{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .plate-signup{
+        background-color: white;
+        width: 850px;
+        height: 420px;
+        border-radius: 60px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        margin-bottom: 125px;
+    }
+    .signup-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .plate-su-name{
+        font-size: 34px;
+        font-weight: bold;
+        max-width: 648px;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .plate-su-info{
+        font-size: 20px;
+        max-width: 508px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 130px;
+    }
+    .form-min{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-field{
+        max-width: 300px;
+        height: 50px;
+        font-size: 22px;
+        padding-left: 40px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25) inset;
+        margin-bottom: 40px;
+    }
+    .input-field::placeholder{
+        color: black;
+        opacity: 30%;
+        font-size: 22px;
+    }
+    .input-button{
+        width: 300px;
+        height: 50px;
+        border-radius: 20px;
+        border: 2px solid black;
+        background-color: black;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        transition:  .5s;
+        margin-right: 20px;
+    }
+    .input-button:hover{
+        background-color: #E6E6E6;
+        color: black;
+        transition:  .5s;
+    }
+    .footer-feet-phone-number{
+        font-size: 18px;
+    }
+    .footer-feet-right-text{
+        font-size: 8px;
+    }
+}
+/*Медиазапрос для 915px*/
+@media (max-width: 915px){
+    .header-links{
+        margin-right: 20px;
+    }
+    .logo-img{
+        margin-right: 30px;
+    }
+}
+/*Медиазапрос для 850px*/
+@media (max-width: 850px){
+    .header-link{
+        display: none;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .plate-signup{
+        width: 550px;
+        height: 600px;
+        margin-bottom: 60px;
+    }
+    .signup-text{
+        margin: 0 auto;
+    }
+    .plate-su-name{
+        margin-bottom: 20px;
+    }
+    .plate-su-info{
+        margin-bottom: 40px;
+    }
+    .input-field{
+        margin-bottom: 20px;
+    }
+    .plate-signup{
+        flex-direction: column;
+    }
+    .footer-feet-phone-number{
+        font-size: 14px;
+    }
+    .footer-feet-right-text{
+        font-size: 8px;
+    }
+    .footer-logo-img{
+        width: 100px;
+        margin-top: 15px;
+    }
+    .footer-left-heading{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .footer-right-heading{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .header-links{
+        font-size: 14px;
+    }
+    .footer{
+        height: 160px;
+    }
+}
+/*Медиазапрос для 610px*/
+@media (max-width: 610px){
+    .footer-feet-right{
+        max-width: 300px;
+    }
+    .footer-feet-right-text{
+        max-width: 300px;
+        font-size: 6px;
+    }
+}
+/*Медиазапрос для 570px*/
+@media (max-width: 570px){
+    .plate-signup{
+        width: 400px;
+        height: 700px;
+        margin-bottom: 60px;
+    }
+    .signup-text{
+        margin: 0 auto;
+    }
+    .plate-su-name{
+        font-size: 28px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+    .plate-su-info{
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .input-field{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .input-button{
+        margin: auto;
+    }
+    .adventages-heading{
+        font-size: 34px;
+    }
+    .courses-heading{
+        font-size: 34px;
+    }
+    .employeers-heading{
+        font-size: 34px;
+    }
+    .footer-feet-phone-text{
+        font-size: 8px;
+    }
+    .footer-feet-phone-number{
+        max-width: 200px;
+    }
+    .footer-feet-left{
+        margin-right: 150px;
+    }
+    .plate{
+        width: 400px;
+        height: 400px;
+    }
+    .plate-img{
+        width: 408px;
+    }
+    .plate-big{
+        width: 400px;
+        height: 500px;
+    }
+    .plate-emp{
+        width: 400px;
+        height: 400px;
+    }
+    .plate-img-state{
+        width: 175px;
+        height: 175px;
+    }
+    .plate-name-emp{
+        font-size: 18px;
+    }
+    .plate-post-emp{
+        font-size: 16px;
+    }
+    .plate-experience-emp{
+        font-size: 16px;
+    }
+    .plate-portfolio-href-emp{
+        font-size: 16px;
+    }
+    .footer-right{
+        margin-right: 5px;
+    }
+    .footer-left{
+        margin-left: 5px;
+    }
+    .footer-right-heading{
+        font-size: 8px;
+        width: 100px;
+    }
+    .footer-left-heading{
+        font-size: 8px;
+        width: 100px;
+    }
+    .footer-feet-phone-number{
+        width: 150px;
+        margin-top: 6px;
+    }
+    .footer-feet-phone-text{
+        width: 150px;
+        margin-bottom: 6px;
+    }
+}
+/*Медиазапрос для 480px*/
+@media (max-width: 480px){
+    .footer-feet-right{
+       width: 100px;
+    }
+    .footer-feet-right-text{
+        width: 100px;
+        font-size: 4px;
+    }
+    .footer-feet-left{
+        margin-left: 5px;
+    }
+    .footer-feet-right{
+        margin-right: 5px;
+    }
+    .footer{
+        height: 110px;
+    }
+}
+/*Медиазапрос для 410px*/
+@media (max-width: 410px){
+    .plate{
+        width: 350px;
+        height: 350px;
+    }
+    .plate-last{
+        height: 400px;
+    }
+    .plate-img{
+        width: 356px;
+    }
+    .plate-info-last{
+        margin-bottom: 0px;
+    }
+    .plate-description{
+        margin-bottom: 0px;
+    }
+    .plate-info-cours{
+        padding-top: 5px;
+    }
+    .plate-price{
+        padding-top: 10px;
+    }
+    .plate-emp{
+        width: 350px;
+        height: 350px;
+    }
+    .plate-img-state{
+        width: 125px;
+        height: 125px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .plate-name-emp{
+        font-size: 15px;
+    }
+    .plate-big{
+        width: 350px;
+    }
+    .plate-description{
+        max-width: 350px;
+        font-size: 18px;
+    }
+    .list-max{
+        padding: 15px;
+    }
+    .list-min{
+        font-size: 18px;
+    }
+    .plate-signup{
+        width: 350px;
+    }
+    .plate-name-emp, .plate-post-emp, .plate-experience-emp{
+        padding: 15px;
+    }
+    .plate-portfolio-emp{
+        margin-top: 50px;
+    }
+    .adventages-heading, .courses-heading, .employeers-heading{
+        font-size: 30px;
+    }
+    .footer-feet-left{
+        max-width: 120px;
+        margin-right: 0px;
+    }
+}
